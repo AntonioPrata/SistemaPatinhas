@@ -76,9 +76,5 @@ class Evento(models.Model):
     class Meta:
         verbose_name_plural = 'Eventos'
 
-    class Meta:
-        verbose_name_plural = 'Tipos'
-
     def str(self):
-        return self.nome_tipo
-
+        return self.nome
