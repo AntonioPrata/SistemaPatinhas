@@ -25,6 +25,7 @@ class Animal(models.Model):
     personalidade = models.CharField()
     raca = models.ForeignKey(Raca, on_delete=models.CASCADE, null=True)
 
+
 class Cachorro(Animal):
     porte = models.CharField(max_length=50)
 
@@ -74,3 +75,10 @@ class Evento(models.Model):
 
     class Meta:
         verbose_name_plural = 'Eventos'
+
+    class Meta:
+        verbose_name_plural = 'Tipos'
+
+    def str(self):
+        return self.nome_tipo
+
